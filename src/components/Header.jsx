@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Menu, X, Search, MessageCircle, ShoppingCart } from 'lucide-react'
 import logo from '../assets/logo.png'
@@ -35,6 +36,18 @@ export default function Header() {
     setSearchOpen(false)
   }, [navigate])
 
+  // Lock background scroll while the mobile menu is open, and always
+  // restore it on close/unmount so the page never gets stuck non-scrollable.
+  useEffect(() => {
+    if (menuOpen) {
+      const previousOverflow = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => {
+        document.body.style.overflow = previousOverflow
+      }
+    }
+  }, [menuOpen])
+
   const submitSearch = (e) => {
     e.preventDefault()
     if (query.trim()) {
@@ -66,7 +79,8 @@ export default function Header() {
 
       <div className="container-page flex items-center gap-4 py-3">
         <button
-          className="rounded-lg p-2 text-navy-800 hover:bg-navy-50 lg:hidden"
+          type="button"
+          className="relative z-10 rounded-lg p-2 text-navy-800 hover:bg-navy-50 lg:hidden"
           aria-label="Open menu"
           onClick={() => setMenuOpen(true)}
         >
@@ -169,53 +183,59 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu drawer */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div
-            className="absolute inset-0 bg-navy-900/40"
-            onClick={() => setMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="absolute left-0 top-0 h-full w-72 max-w-[85%] overflow-y-auto bg-white p-5 shadow-cardHover">
-            <div className="flex items-center justify-between">
-              <img src={logo} alt="Master Solar & Electronics" className="h-10 w-auto" />
-              <button
-                aria-label="Close menu"
-                onClick={() => setMenuOpen(false)}
-                className="rounded-lg p-2 text-navy-700 hover:bg-navy-50"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
-            <nav className="mt-6 flex flex-col gap-1">
-              {NAV_LINKS.map((link) => (
-                <NavLink
-                  key={link.to}
-                  to={link.to}
-                  end={link.to === '/'}
-                  className={({ isActive }) =>
-                    `rounded-lg px-3 py-2.5 text-sm font-medium ${
-                      isActive ? 'bg-navy-50 text-navy-900' : 'text-navy-700 hover:bg-navy-50'
-                    }`
-                  }
+      {/* Mobile menu drawer — rendered via portal directly into <body> so it
+          always covers the full viewport, independent of the header's own
+          backdrop-blur (which would otherwise clip a nested fixed element
+          to the header's own box in most browsers). */}
+      {menuOpen &&
+        createPortal(
+          <div className="fixed inset-0 z-[100] lg:hidden">
+            <div
+              className="absolute inset-0 bg-navy-900/40"
+              onClick={() => setMenuOpen(false)}
+              aria-hidden="true"
+            />
+            <div className="absolute left-0 top-0 h-full w-72 max-w-[85%] overflow-y-auto bg-white p-5 shadow-cardHover">
+              <div className="flex items-center justify-between">
+                <img src={logo} alt="Master Solar & Electronics" className="h-10 w-auto" />
+                <button
+                  type="button"
+                  aria-label="Close menu"
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg p-2 text-navy-700 hover:bg-navy-50"
                 >
-                  {link.label}
-                </NavLink>
-              ))}
-            </nav>
-            <a
-              href={buildWhatsAppLink(generalInquiryMessage())}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-whatsapp mt-6 w-full"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      )}
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              <nav className="mt-6 flex flex-col gap-1">
+                {NAV_LINKS.map((link) => (
+                  <NavLink
+                    key={link.to}
+                    to={link.to}
+                    end={link.to === '/'}
+                    className={({ isActive }) =>
+                      `rounded-lg px-3 py-2.5 text-sm font-medium ${
+                        isActive ? 'bg-navy-50 text-navy-900' : 'text-navy-700 hover:bg-navy-50'
+                      }`
+                    }
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </nav>
+              <a
+                href={buildWhatsAppLink(generalInquiryMessage())}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp mt-6 w-full"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>,
+          document.body
+        )}
     </header>
   )
 }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="400" height="400" fill="none"/>
+  <g transform="translate(50,20) scale(3)" stroke="#7c2d12" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+<path d="M34 20 L66 20 L60 78 Q50 86 40 78 Z"/>
+<path d="M66 30 Q82 34 78 46 Q74 54 62 50"/>
+<rect x="42" y="82" width="16" height="6" rx="2"/>
+
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Juicer Blender</text><text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Combo</text>
+</svg>

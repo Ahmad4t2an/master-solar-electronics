@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="400" height="400" fill="none"/>
+  <g transform="translate(50,20) scale(3)" stroke="#92400e" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+<rect x="20" y="22" width="60" height="56" rx="5"/>
+<rect x="28" y="30" width="30" height="16" rx="2"/>
+<circle cx="68" cy="60" r="10"/>
+<line x1="68" y1="53" x2="68" y2="60"/>
+<line x1="28" y1="65" x2="50" y2="65"/>
+
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">MPPT Charge</text><text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Controller 60A</text>
+</svg>

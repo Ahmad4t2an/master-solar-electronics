@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { SlidersHorizontal, X } from 'lucide-react'
 
 export default function ProductFilters({
@@ -14,6 +15,16 @@ export default function ProductFilters({
   onSortChange
 }) {
   const [mobileOpen, setMobileOpen] = useState(false)
+
+  useEffect(() => {
+    if (mobileOpen) {
+      const previousOverflow = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => {
+        document.body.style.overflow = previousOverflow
+      }
+    }
+  }, [mobileOpen])
 
   const Filters = (
     <div className="space-y-6">
@@ -98,6 +109,7 @@ export default function ProductFilters({
     <>
       <div className="mb-4 lg:hidden">
         <button
+          type="button"
           onClick={() => setMobileOpen(true)}
           className="btn btn-outline w-full"
         >
@@ -107,23 +119,29 @@ export default function ProductFilters({
 
       <aside className="hidden w-64 shrink-0 lg:block">{Filters}</aside>
 
-      {mobileOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-navy-900/40" onClick={() => setMobileOpen(false)} />
-          <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto rounded-t-2xl bg-white p-5">
-            <div className="mb-4 flex items-center justify-between">
-              <h3 className="font-display text-lg font-semibold text-navy-900">Filters & Sort</h3>
-              <button onClick={() => setMobileOpen(false)} aria-label="Close filters">
-                <X className="h-5 w-5" />
+      {mobileOpen &&
+        createPortal(
+          <div className="fixed inset-0 z-[100] lg:hidden">
+            <div className="absolute inset-0 bg-navy-900/40" onClick={() => setMobileOpen(false)} />
+            <div className="absolute bottom-0 left-0 right-0 max-h-[85vh] overflow-y-auto rounded-t-2xl bg-white p-5">
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="font-display text-lg font-semibold text-navy-900">Filters & Sort</h3>
+                <button type="button" onClick={() => setMobileOpen(false)} aria-label="Close filters">
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              {Filters}
+              <button
+                type="button"
+                onClick={() => setMobileOpen(false)}
+                className="btn btn-primary mt-6 w-full"
+              >
+                Show Results
               </button>
             </div>
-            {Filters}
-            <button onClick={() => setMobileOpen(false)} className="btn btn-primary mt-6 w-full">
-              Show Results
-            </button>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </>
   )
 }

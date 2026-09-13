@@ -41,7 +41,7 @@ export const products = [
     oldPrice: null,
     priceIsDemo: false,
     availability: 'In Stock',
-    images: ['/images/products/jinko-solar-panel-585w.svg'],
+    images: ['/images/products/solar-panel.jpg'],
     featured: true,
     bestSeller: true
   },
@@ -58,7 +58,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/canadian-solar-panel-550w.svg'],
+    images: ['/images/products/solar-panel.jpg'],
     featured: true
   },
   {
@@ -74,7 +74,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/portable-solar-panel-120w-foldable.svg']
+    images: ['/images/products/solar-panel-foldable.jpg']
   },
   {
     slug: 'inverex-hybrid-inverter-8kw',
@@ -89,7 +89,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/inverex-hybrid-inverter-8kw.svg'],
+    images: ['/images/products/solar-inverter.jpg'],
     featured: true,
     bestSeller: true
   },
@@ -106,7 +106,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solis-hybrid-inverter-5kw.svg']
+    images: ['/images/products/solar-inverter.jpg']
   },
   {
     slug: 'growatt-ongrid-inverter-10kw',
@@ -121,7 +121,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/growatt-ongrid-inverter-10kw.svg']
+    images: ['/images/products/solar-inverter.jpg']
   },
   {
     slug: 'osaka-lithium-battery-100ah',
@@ -136,7 +136,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/osaka-lithium-battery-100ah.svg'],
+    images: ['/images/products/lithium-battery.jpg'],
     bestSeller: true
   },
   {
@@ -152,7 +152,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/phoenix-lead-acid-battery-200ah.svg']
+    images: ['/images/products/lead-acid-battery.jpg']
   },
   {
     slug: 'epever-mppt-controller-60a',
@@ -167,7 +167,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/epever-mppt-controller-60a.svg']
+    images: ['/images/products/charge-controller.jpg']
   },
   {
     slug: 'pwm-charge-controller-30a',
@@ -182,7 +182,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/pwm-charge-controller-30a.svg']
+    images: ['/images/products/charge-controller.jpg']
   },
   {
     slug: 'ecoflow-power-station-portable',
@@ -197,7 +197,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/ecoflow-power-station-portable.svg'],
+    images: ['/images/products/power-station.jpg'],
     featured: true
   },
   {
@@ -213,7 +213,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-generator-mini-500w.svg']
+    images: ['/images/products/power-station.jpg']
   },
 
   // ---------------------------------------------------------------------
@@ -232,7 +232,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-rechargeable-ceiling-fan-56.svg'],
+    images: ['/images/products/ceiling-fan-solar.jpg'],
     bestSeller: true
   },
   {
@@ -248,7 +248,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-rechargeable-pedestal-fan-16.svg']
+    images: ['/images/products/pedestal-fan-solar.jpg']
   },
   {
     slug: 'solar-exhaust-fan-industrial',
@@ -263,7 +263,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/solar-exhaust-fan-industrial.svg']
+    images: ['/images/products/exhaust-fan.jpg']
   },
   {
     slug: 'solar-led-bulb-12w',
@@ -278,7 +278,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-led-bulb-12w.svg']
+    images: ['/images/products/solar-bulb.jpg']
   },
   {
     slug: 'solar-street-light-100w',
@@ -293,7 +293,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-street-light-100w.svg'],
+    images: ['/images/products/street-light.jpg'],
     featured: true
   },
   {
@@ -309,7 +309,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-flood-light-200w.svg']
+    images: ['/images/products/flood-light.jpg']
   },
   {
     slug: 'solar-garden-light-set',
@@ -324,7 +324,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-garden-light-set.svg']
+    images: ['/images/products/garden-light.jpg']
   },
   {
     slug: 'solar-camping-lantern',
@@ -339,7 +339,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-camping-lantern.svg']
+    images: ['/images/products/camping-lantern.jpg']
   },
   {
     slug: 'solar-emergency-light-rechargeable',
@@ -354,7 +354,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-emergency-light-rechargeable.svg']
+    images: ['/images/products/emergency-light.jpg']
   },
   {
     slug: 'solar-water-pump-submersible',
@@ -369,7 +369,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/solar-water-pump-submersible.svg']
+    images: ['/images/products/water-pump.jpg']
   },
   {
     slug: 'solar-water-heater-150l',
@@ -384,7 +384,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/solar-water-heater-150l.svg']
+    images: ['/images/products/solar-water-heater.jpg']
   },
   {
     slug: 'solar-cctv-camera-wifi',
@@ -399,7 +399,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-cctv-camera-wifi.svg']
+    images: ['/images/products/cctv-camera.jpg']
   },
   {
     slug: 'solar-power-bank-20000mah',
@@ -414,7 +414,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/solar-power-bank-20000mah.svg']
+    images: ['/images/products/power-bank.jpg']
   },
 
   // ---------------------------------------------------------------------
@@ -433,7 +433,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/tcl-smart-led-tv-43.svg'],
+    images: ['/images/products/led-tv.jpg'],
     bestSeller: true
   },
   {
@@ -449,7 +449,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/samsung-crystal-uhd-tv-55.svg'],
+    images: ['/images/products/led-tv-large.jpg'],
     featured: true
   },
   {
@@ -465,7 +465,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/ecostar-led-tv-32.svg']
+    images: ['/images/products/led-tv-small.jpg']
   },
   {
     slug: 'jbl-soundbar-2.1',
@@ -480,7 +480,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/jbl-soundbar-2.1.svg']
+    images: ['/images/products/soundbar.jpg']
   },
   {
     slug: 'sonic-home-theater-5.1',
@@ -495,7 +495,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/sonic-home-theater-5.1.svg']
+    images: ['/images/products/home-theater.jpg']
   },
   {
     slug: 'jbl-bluetooth-speaker-flip',
@@ -510,7 +510,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/jbl-bluetooth-speaker-flip.svg'],
+    images: ['/images/products/bluetooth-speaker.jpg'],
     bestSeller: true
   },
   {
@@ -526,7 +526,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/pak-fan-ceiling-56-electric.svg']
+    images: ['/images/products/ceiling-fan-electric.jpg']
   },
   {
     slug: 'boat-earbuds-wireless',
@@ -541,7 +541,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/boat-earbuds-wireless.svg']
+    images: ['/images/products/wireless-earbuds.jpg']
   },
 
   // ---------------------------------------------------------------------
@@ -560,7 +560,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/gree-inverter-ac-1.5ton.svg'],
+    images: ['/images/products/split-ac.jpg'],
     featured: true,
     bestSeller: true
   },
@@ -577,7 +577,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/haier-inverter-ac-1ton.svg']
+    images: ['/images/products/split-ac.jpg']
   },
   {
     slug: 'dawlance-refrigerator-91999',
@@ -592,7 +592,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/dawlance-refrigerator-91999.svg'],
+    images: ['/images/products/double-door-fridge.jpg'],
     bestSeller: true
   },
   {
@@ -608,7 +608,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/pel-refrigerator-glass-door.svg']
+    images: ['/images/products/glass-door-fridge.jpg']
   },
   {
     slug: 'waves-deep-freezer-single-door',
@@ -623,7 +623,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/waves-deep-freezer-single-door.svg']
+    images: ['/images/products/deep-freezer.jpg']
   },
   {
     slug: 'haier-washing-machine-fully-automatic-8kg',
@@ -638,7 +638,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/haier-washing-machine-fully-automatic-8kg.svg'],
+    images: ['/images/products/washing-machine-auto.jpg'],
     featured: true
   },
   {
@@ -654,7 +654,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/dawlance-washing-machine-semi-auto-10kg.svg']
+    images: ['/images/products/washing-machine-semi.jpg']
   },
   {
     slug: 'boss-dryer-electric',
@@ -669,7 +669,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/boss-dryer-electric.svg']
+    images: ['/images/products/clothes-dryer.jpg']
   },
   {
     slug: 'orient-air-cooler-akaza',
@@ -684,7 +684,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/orient-air-cooler-akaza.svg'],
+    images: ['/images/products/air-cooler.jpg'],
     bestSeller: true
   },
   {
@@ -700,7 +700,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/nasgas-water-dispenser.svg']
+    images: ['/images/products/water-dispenser.jpg']
   },
   {
     slug: 'kenwood-water-cooler',
@@ -715,7 +715,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/kenwood-water-cooler.svg']
+    images: ['/images/products/water-cooler.jpg']
   },
   {
     slug: 'canon-geyser-instant',
@@ -730,7 +730,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/canon-geyser-instant.svg']
+    images: ['/images/products/geyser.jpg']
   },
   {
     slug: 'westpoint-vacuum-cleaner',
@@ -745,7 +745,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/westpoint-vacuum-cleaner.svg']
+    images: ['/images/products/vacuum-cleaner.jpg']
   },
   {
     slug: 'philips-steam-iron',
@@ -760,7 +760,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/philips-steam-iron.svg']
+    images: ['/images/products/steam-iron.jpg']
   },
   {
     slug: 'gfc-pedestal-fan',
@@ -775,7 +775,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/gfc-pedestal-fan.svg']
+    images: ['/images/products/pedestal-fan-electric.jpg']
   },
 
   // ---------------------------------------------------------------------
@@ -794,7 +794,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/dawlance-microwave-oven-solo.svg'],
+    images: ['/images/products/microwave-solo.jpg'],
     bestSeller: true
   },
   {
@@ -810,7 +810,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/homage-microwave-oven-grill.svg']
+    images: ['/images/products/microwave-grill.jpg']
   },
   {
     slug: 'westpoint-built-in-oven',
@@ -825,7 +825,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/westpoint-built-in-oven.svg']
+    images: ['/images/products/built-in-oven.jpg']
   },
   {
     slug: 'anex-air-fryer-4l',
@@ -840,7 +840,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/anex-air-fryer-4l.svg'],
+    images: ['/images/products/air-fryer.jpg'],
     featured: true,
     bestSeller: true
   },
@@ -857,7 +857,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/kenwood-juicer-blender-combo.svg']
+    images: ['/images/products/juicer-blender.jpg']
   },
   {
     slug: 'panasonic-blender-mx',
@@ -872,7 +872,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/panasonic-blender-mx.svg']
+    images: ['/images/products/blender-grinder.jpg']
   },
   {
     slug: 'anex-chopper-electric',
@@ -887,7 +887,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/anex-chopper-electric.svg']
+    images: ['/images/products/vegetable-chopper.jpg']
   },
   {
     slug: 'kenwood-food-processor',
@@ -902,7 +902,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/kenwood-food-processor.svg']
+    images: ['/images/products/food-processor.jpg']
   },
   {
     slug: 'philips-electric-kettle',
@@ -917,7 +917,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/philips-electric-kettle.svg'],
+    images: ['/images/products/electric-kettle.jpg'],
     bestSeller: true
   },
   {
@@ -933,7 +933,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/anex-sandwich-maker.svg']
+    images: ['/images/products/sandwich-maker.jpg']
   },
   {
     slug: 'westpoint-coffee-maker',
@@ -948,7 +948,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/westpoint-coffee-maker.svg']
+    images: ['/images/products/coffee-maker.jpg']
   },
   {
     slug: 'nasgas-electric-stove-double',
@@ -963,7 +963,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/nasgas-electric-stove-double.svg']
+    images: ['/images/products/electric-stove.jpg']
   },
   {
     slug: 'homage-kitchen-hood-hob-set',
@@ -978,7 +978,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'Order on Demand',
-    images: ['/images/products/homage-kitchen-hood-hob-set.svg']
+    images: ['/images/products/kitchen-hood.jpg']
   },
   {
     slug: 'anex-toaster-2-slice',
@@ -993,7 +993,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/anex-toaster-2-slice.svg']
+    images: ['/images/products/pop-up-toaster.jpg']
   },
   {
     slug: 'kenwood-grinder-mill',
@@ -1008,7 +1008,7 @@ export const products = [
     price: null,
     oldPrice: null,
     availability: 'In Stock',
-    images: ['/images/products/kenwood-grinder-mill.svg']
+    images: ['/images/products/grinder-mill.jpg']
   }
 ]
 

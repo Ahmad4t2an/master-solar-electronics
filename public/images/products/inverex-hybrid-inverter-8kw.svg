@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="400" height="400" fill="none"/>
+  <g transform="translate(50,20) scale(3)" stroke="#92400e" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+<rect x="26" y="12" width="48" height="76" rx="5"/>
+<rect x="34" y="22" width="32" height="18" rx="2"/>
+<circle cx="40" cy="55" r="4"/>
+<circle cx="53" cy="55" r="4"/>
+<circle cx="66" cy="55" r="4"/>
+<line x1="34" y1="70" x2="66" y2="70"/>
+<line x1="34" y1="78" x2="66" y2="78"/>
+
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Hybrid Solar</text><text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Inverter 8kW</text>
+</svg>
