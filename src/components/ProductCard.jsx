@@ -67,7 +67,7 @@ export default function ProductCard({ product }) {
           </span>
         )}
 
-        <div className="mt-4 flex gap-2">
+        <div className="mt-4 flex flex-col gap-2 lg:flex-row">
           <Link
             to={`/product/${product.slug}`}
             className="btn btn-outline flex-1 !px-3 !py-2 text-xs"
