@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="400" height="400" fill="none"/>
+  <g transform="translate(50,20) scale(3)" stroke="#7c2d12" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+<path d="M36 30 L64 30 L60 74 Q50 82 40 74 Z"/>
+<rect x="32" y="18" width="36" height="14" rx="3"/>
+<line x1="50" y1="38" x2="50" y2="60"/>
+
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Dry & Wet</text><text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Grinder Mill</text>
+</svg>

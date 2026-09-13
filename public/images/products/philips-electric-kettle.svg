@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect x="0" y="0" width="400" height="400" fill="none"/>
+  <g transform="translate(50,20) scale(3)" stroke="#7c2d12" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+<path d="M24 46 Q24 76 50 78 Q76 76 76 46 Q76 38 66 38 L34 38 Q24 38 24 46 Z"/>
+<path d="M76 46 Q92 44 90 34"/>
+<path d="M36 38 Q40 22 52 24"/>
+<circle cx="50" cy="30" r="3"/>
+
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">Electric Kettle</text><text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937">1.7L</text>
+</svg>
