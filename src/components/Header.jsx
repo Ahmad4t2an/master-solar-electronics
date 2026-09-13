@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom'
 import { Menu, X, Search, MessageCircle, ShoppingCart } from 'lucide-react'
 import logo from '../assets/logo.png'
 import { useCart } from '../context/CartContext.jsx'
@@ -24,6 +24,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { totalItems } = useCart()
   const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -31,10 +32,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // `navigate` from useNavigate() never changes identity between renders, so
+  // depending on it here would only run this once (on mount) and never again
+  // on an actual route change. Depend on the current path instead so the
+  // mobile menu and search box always close after navigating.
   useEffect(() => {
     setMenuOpen(false)
     setSearchOpen(false)
-  }, [navigate])
+  }, [location.pathname])
 
   // Lock background scroll while the mobile menu is open, and always
   // restore it on close/unmount so the page never gets stuck non-scrollable.
@@ -213,6 +218,7 @@ export default function Header() {
                     key={link.to}
                     to={link.to}
                     end={link.to === '/'}
+                    onClick={() => setMenuOpen(false)}
                     className={({ isActive }) =>
                       `rounded-lg px-3 py-2.5 text-sm font-medium ${
                         isActive ? 'bg-navy-50 text-navy-900' : 'text-navy-700 hover:bg-navy-50'

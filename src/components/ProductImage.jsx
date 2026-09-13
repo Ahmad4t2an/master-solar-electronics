@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Sun, Tv, Refrigerator, CookingPot, Package } from 'lucide-react'
 
 const ICONS = {
@@ -28,13 +29,25 @@ const ICON_COLOR = {
  * src/data/products.js and they will show automatically.
  */
 export default function ProductImage({ src, alt, categoryGroup = 'electronics', className = '' }) {
-  if (src) {
+  const [failed, setFailed] = useState(false)
+  const [lastSrc, setLastSrc] = useState(src)
+
+  // Reset the "failed" flag whenever a different image URL is passed in
+  // (e.g. this component instance gets reused for a different product).
+  if (src !== lastSrc) {
+    setLastSrc(src)
+    if (failed) setFailed(false)
+  }
+
+  if (src && !failed) {
     return (
       <img
+        key={src}
         src={src}
         alt={alt}
         loading="lazy"
         className={`h-full w-full object-cover ${className}`}
+        onError={() => setFailed(true)}
       />
     )
   }
